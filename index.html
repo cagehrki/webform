@@ -1,89 +1,100 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>"Webform Project Page</title>
-        <link rel="stylesheet" type="text/css" href="styles/style.css" media="screen"/>
+        <title>Chess Webform</title>
+        <link rel="stylesheet" href="styles/style.css" type="text/css"/>
+        <link rel="icon" type='image/x-icon' href='images/chess-knight/favicon.ico'>
         <meta name="author" content="Conrad Gehrki"/>
         <meta name="description" content="Form for Web Dev practice"/>
-        <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
     </head>
 
     <body>
-        <h1 id='title'>Do you like chess?</h1> 
-        <p id='description'>Fill out this simple survey for funsies</p>
-        <form id='survey-form'>
-           
-            <label id='name-label' for='name'>
-                Your Name
-                <input type='text' id='name' placeholder="John Doe" required>
-            </label>
-           
-            <label id='email-label' for='email'>
-                Email
-                <input type='email' placeholder='Enter your Email' required>
-            </label>
-           
-            <label id='number-label' for='number'>
-                Years of Experience <small>(optional)</small> 
-                <input type='number' min='0' max='99' step='1'>
-            </label>
-            
-            <label for='dropdown'>
-                Your Experience Level
-                <select name="player-level" id='dropdown'>
-                    <option value='none'>New Player (&lt 800)</option> 
-                    <option value='novice'>Novice (800-1200)</option> 
-                    <option value='intermediate'>Intermediate (1200-1600)</option>
-                    <option value='advanced'>Expert (1600-2000)</option>
-                    <option value='master'>Master (2000+)</option>
-                </select>
-            </label>
-            
-            <h2>What are your favorite chess openings? <small>(Check all that apply)</small></h2> 
-            <label for='opening-1'>
-                <input type='checkbox' id='opening-1' name='opening-name' value='ruy-lopez'>Ruy-Lopez
-            </label>
-            <label for='opening-2'>
-                <input type='checkbox' id='opening-2' name='italian-game' value='italian-game'>Italian Game
-            </label>
-            <label for='opening-3'>
-                <input type='checkbox' id='opening-3' name='queen-gambit' value='queen-gambit'>Queen's Gambit
-            </label>
-            <label for='opening-4'>
-                <input type='checkbox' id='opening-4' name='english-open' value='english-open'>English Opening
-            </label>
-            <label for='opening-5'>
-                <input type='checkbox' id='opening-5' name='reti-open' value='reti-open'>Reti Opening
-            </label>
-            <label for='opening-6'>
-                <input type='checkbox' id='opening-6' name='sicilian' value='sicilian'>Sicilian Defense
-            </label>
-            <label for='opening-7'>
-                <input type='checkbox' id='opening-7' name='french-def' value='french-def'>French Defense
-            </label>
-            <label for='opening-8'>
-                <input type='checkbox' id='opening-8' name='caro-kann' value='karo-cann'>Caro-Kann Defense
-            </label>
-            <label for='opening-9'>
-                <input type='checkbox' id='opening-9' name='pirc' value='pirc'>Pirc Defense
-            </label>
-            <label for='opening-10'>
-                <input type='checkbox' id='opening-10' name='indiean' value='indian'>Indian Defense
-            </label>
-                
-            <label for='yes'>
-                <input type='radio' name="subscribe-option">Yes
-            </label>
-            <label for='no'>
-                <input type='radio' name="subscribe-option">No
-            </label>
-           
-            <label for="suggestion">
-                Comments or suggestions?
-                <textarea id='suggestion' name="user-suggestion" rows='4' cols='50'>
-                    Help us improve this form...!
-                </textarea> 
-            </label>
-        </form>
+        <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+        <div id="main-div">
+            <div id="title-div">
+                <h1 id='title'>Chess Player Form</h1> 
+                <p id='description'>Tell us about your chess experience</p><br> 
+            </div>
+
+            <div id="form-div">
+                <form id='survey-form' action="/form_action">
+                    <label class="section" id='name-label' for='name'>
+                        Your Name<br> 
+                        <input id='name' type='text' id='name' placeholder="John Doe" required>
+                    </label>
+                    <br> 
+                   
+                    <label id='email-label' for='email'>
+                        Email<br> 
+                        <input id="email" type='email' placeholder='Enter your Email' required>
+                    </label> 
+                    <br>
+                   
+                    <label class="section" id='number-label' for='number'>
+                        Years of Experience <small>(optional)</small><br> 
+                        <input id="number" type='number' min='0' max='99' step='1' placeholder='0'>
+                    </label>
+                    <br>
+                    
+                    <label class="section" for='dropdown'>
+                        Your Experience Level<br> 
+                        <select name="player-level" id='dropdown'><br> 
+                            <option value='none'>New Player (&lt 800)</option> 
+                            <option value='novice'>Novice (800-1200)</option> 
+                            <option value='intermediate'>Intermediate (1200-1600)</option>
+                            <option value='advanced'>Expert (1600-2000)</option>
+                            <option value='master'>Master (2000+)</option>
+                        </select>
+                    </label>
+                    <br>
+                    
+                    <p>What are your favorite chess openings? <small>(Check all that apply)</small></p> 
+                    <label for='opening-1'>
+                        <input type='checkbox' id='opening-1' name='opening-name' value='ruy-lopez'>Ruy-Lopez<br> 
+                    </label>
+                    <label for='opening-2'>
+                        <input type='checkbox' id='opening-2' name='italian-game' value='italian-game'>Italian Game<br> 
+                    </label>
+                    <label for='opening-3'>
+                        <input type='checkbox' id='opening-3' name='queen-gambit' value='queen-gambit'>Queen's Gambit<br> 
+                    </label>
+                    <label for='opening-4'>
+                        <input type='checkbox' id='opening-4' name='english-open' value='english-open'>English Opening<br> 
+                    </label>
+                    <label for='opening-5'>
+                        <input type='checkbox' id='opening-5' name='reti-open' value='reti-open'>Reti Opening<br> 
+                    </label>
+                    <label for='opening-6'>
+                        <input type='checkbox' id='opening-6' name='sicilian' value='sicilian'>Sicilian Defense<br> 
+                    </label>
+                    <label for='opening-7'>
+                        <input type='checkbox' id='opening-7' name='french-def' value='french-def'>French Defense<br> 
+                    </label>
+                    <label for='opening-8'>
+                        <input type='checkbox' id='opening-8' name='caro-kann' value='karo-cann'>Caro-Kann Defense<br> 
+                    </label>
+                    <label for='opening-9'>
+                        <input type='checkbox' id='opening-9' name='pirc' value='pirc'>Pirc Defense<br> 
+                    </label>
+                    <label for='opening-10'>
+                        <input type='checkbox' id='opening-10' name='indian' value='indian'>Indian Defense<br> 
+                    </label>
+                       
+                    <p>Would you like to subscribe to our newsletter?</p>
+                    <label for='yes-radio-button'>
+                        <input id='yes-radio-button' type='radio' name="subscribe-option" value='0'>Yes<br> 
+                    </label>
+                    <label for='no-radio-button'> 
+                        <input id='no-radio-butto' type='radio' name="subscribe-option" value='0'>No<br> <br> 
+                    </label>
+                   
+                    <label for="suggestion">
+                        Do you have other comments or suggestions for us?<br> 
+                        <textarea id='suggestion' name="user-suggestion" rows='4' cols='50' placeholder="Help us improve this site!"></textarea><br> 
+                    </label>
+                    <button class="section" id="submit" type="submit" form="survey-form">Submit</button>
+                </form>
+            </div>
+        </div>
     </body>
 </html> 
